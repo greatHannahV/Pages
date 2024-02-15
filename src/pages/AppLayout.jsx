@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router'
-import Button from '../Button'
+import Button from '../components/Button'
 
 function AppLayout() {
   return (
