@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Menu from '../pages/Menu'
 import AppLayout from '../pages/AppLayout'
 import About from '../pages/About'
@@ -9,7 +9,7 @@ import NotFound from '../pages/NotFound'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route index element={<Navigate replace to="/about" />} />
         <Route path="/about" element={<About />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
