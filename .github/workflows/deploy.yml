@@ -24,8 +24,9 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
+
       - name: Install dependencies
-        uses: nmp ci
+        uses: npm ci
 
       - name: Build project
         run: npm run build
